@@ -1,0 +1,530 @@
+{ 
+    "CONFIG": {
+        "keys": [
+            "test",
+            "shouldX", "shouldWhat", "demandingX", "demandWhat",
+            "annoyingVerb", "annoysVerb", "annoyingWhat", "hostileWhat", "tolerable", 
+            "sensation", "air", "loom", "border", "angerVerb", "angryWhat",
+            "body", "angryThing", "Xeverything", "onlyX", "notScaryThing",
+            "thingThatSettles", "settling", "alwaysX", "explanation", "Xafraid",
+            "everythingX", "scaryThing", "scaryPlace", "sensed", "thoughtVerb",
+            "somethingX", "quiteX", "thereX", "goodNeutral", "maybeX", "possibleX",
+            "Xleave", "needX", "Xbad", "sightNoun", "barelyX", "turnX", "beyondX",
+            "horrorThing", "changingThing", "changeVerb", "againX", "wetThing",
+            "changeNoun", "halfX", "Xset", "nonChangeVerb", "nonChangeNoun",
+            "essential", "demandX", "peakX", "xReachNoun", "possessivePronoun",
+            "inX", "allowX", "willX", "interroNoun", "ladenX", "unchangingNoun",
+            "hereX", 
+            
+            "grayX", "time", "Xempty", "workNoun", "littleX", "Xelse", "stopVerb",
+            "happyNoun", "Xmast", "extremity", "tactileNatureThing", "Xalive", "OH",
+            "happyVerb", "substance", "vesselNoun", "Xfull"
+        ]
+    },
+    "blank":{
+        "magma": [""],
+        "fear": [""],
+        "concrete": [""],
+        "joy": [""],
+        "whimsy": [""],
+        "demons": [""],
+        "raincloud": [""],
+        "stargazing": [""]
+    },
+    "test":{
+        "all": ["TEST"]
+    },
+    "Xfull":{
+        "all": ["$Xmast", "filled", "full", "brimming", "saturated", "suffused"]
+    },
+    "vesselNoun":{
+        "all": ["cup", "vessel", "mug", "beaker", "chalice", "draught", "goblet", "grail", "stein", "bottle"]
+    },
+    "substance":{
+        "all":["fabirc", "knit", "fiber", "textile", "texture", "cilia", "cord", "thread", "filament"]
+    },
+    "happyVerb":{
+        "all":["rise","love", "laugh", "sing", "treasure", "cherish", "adore", "cultivate", "grow"]
+    },
+    "OH":{
+        "all":["oh", "alas", "at last", "yes", "wow", "ah", "look"]
+    },
+    "Xalive":{
+        "all":["alive", "here", "living", "awake", "extant", "abounding"]
+    },
+    "warmVerb":{
+        "all":["warmed", "thawed", "comforted", "calmed", "gladdened", "revived", "freed", "consoled", "inspirited"]
+    },
+    "tactileNatureThing":{
+        "all":["grass", "water", "dirt", "soil", "meadow", "ocean", "river", "stream", "lake", "mud"]
+    },
+    "extremity":{
+        "all": ["foot", "hand", "finger", "arm", "leg", "ankle", "wrist"]
+    },
+    "Xmast":{
+        "all":[ "mast", "staff", "post", "hail", "height", "full", "kick"]
+    },
+    "happyNoun":{
+        "all":["music", "song", "melody","tune","harmony","hymn", "grin","laughter","smile","simper"]
+    },
+    "stopVerb":{
+        "all":["stop", "break", "block", "bar", "pause", "cease", "close", "end"]
+    },
+    "Xelse":{
+        "all":["else", "more", "extra", "spare", "further"]
+    },
+    "littleX":{
+        "all": ["little", "meager","scant", "diminutive", "infinitesimal", "$barelyX"]
+    },
+    "workNoun":{
+        "all":["work", "effort", "industry", "production", "struggle", "exertion", "toil", "servitude"]
+    },
+    "lifeX":{
+        "all":["$body.all", "life", "being", "breath", "spirit", "existence", "person", "living"]
+    },
+    "Xempty":{
+        "all":["empty", "barren", "void", "blank", "desolate", "dry", "hollow", "unfilled", "vacant", "dead"]
+    },
+    "time":{
+        "all": ["sunrise", "sunset", "afternoon", "evening", "noon", "night", "morning"]
+    },
+    "grayX":{
+        "all": ["gray", "dim", "drab", "clouded", "slate", "stone", "dust", "chalk", "soot"]
+    },
+    "unchangingNoun":{
+        "all":["unchanging", "immutable", "stable", "solid", "unvarying", "constant"],
+        "magma": ["unchallenged", "unyielding", "unfailing"],
+        "fear": ["rigid", "immobile"],
+        "concrete": ["fixed", "static", "lasting", "consistent"],
+        "joy": ["enduring", "still", "abiding"],
+        "whimsy": ["stagnant", "stationary", "permanent"],
+        "demons": ["rigormortis", "immortal"],
+        "raincloud": ["uniform", "monotone", "monochrome"],
+        "stargazing": ["eternal", "everlasting"]
+    },
+    "ladenX":{
+        "all":["laden", "encumbered", "full"],
+        "magma": ["taxed", "gorged", "jammed"],
+        "fear": ["fraught", "imbued", "impregnated"],
+        "concrete": ["loaded", "suffuse", "stocked"],
+        "joy": ["full", "brimming", "bursting"],
+        "whimsy": ["filled", "hampered", "replete"],
+        "demons": ["weighted", "bogged", "teeming"],
+        "raincloud": ["burdened", "profuse", "glutted"],
+        "stargazing": ["lavish", "awash", "bounteous"]
+    },
+    "hereX":{
+        "all": ["here", "this", "that"]
+    },
+    "willX":{
+        "all":["will", "shall", "must", "need"]
+    },
+    "interroNoun":{
+        "all":["who", "what", "where", "when", "how"]
+    },
+    "allowX":{
+        "all":["allow", "permit", "grant", "oblige", "admit", "sanction", "warrant"]
+    },
+    "inX":{
+        "all": ["in", "within", "inside"]
+    },
+    "possessivePronoun":{
+        "all": ["my", "his", "her", "their", "our", "your"]
+    },
+    "xReachNoun":{
+        "all": ["reach", "grasp", "bound"],
+        "magma": ["power", "might", "strength"],
+        "fear": ["reach", "grasp", "bound"],
+        "concrete": ["influence", "scope", "ability"],
+        "joy": ["ken", "spread", "talent"],
+        "whimsy": ["ambit", "sphere", "sweep"],
+        "demons": ["span", "bellow", "snarl"],
+        "raincloud": ["tide", "spate"],
+        "stargazing": ["horizon", "space", "orbit"]
+    },
+    "essential":{
+        "all": ["water", "air", "food"],
+        "magma": ["vindication", "fury", "revenge"],
+        "fear": ["validation", "proof"],
+        "concrete": ["reason", "data", "verification"],
+        "joy": ["laughter", "mirth", "levity"],
+        "whimsy": ["music", "song", "harmony"],
+        "demons": ["vindication", "fury", "revenge"],
+        "raincloud": ["respite", "reprieve", "breath"],
+        "stargazing": ["knowledge", "wonder", "the $cosmic.all's light"]
+    },
+    "peakX":{
+        "all": ["tip", "curve", "crux", "peak", "edge", "apex", "cusp", "summit", "vertex"]
+    },
+    "cosmicThing":{
+        "all": ["moon", "star", "sun", "sky", "earth", "world"]
+    },
+    "nonChangeNoun":{
+        "all": ["hesitation", "dithering", "pause", "waiting", "remaining", "stalling", "rest"],
+        "magma": ["stuttering"],
+        "fear": ["stammering"],
+        "concrete": ["hedging", "hovering"],
+        "joy": ["balking"],
+        "whimsy": ["delay", "lingering"],
+        "demons": ["doubt"],
+        "raincloud": ["shrinking", "faltering"],
+        "stargazing": ["pondering", "tarrying"]
+    },
+    "nonChangeVerb":{
+        "all": ["hesitate", "dither", "pause", "wait", "remain", "stall", "rest"],
+        "magma": ["stutter"],
+        "fear": ["stammer"],
+        "concrete": ["hedge", "hover"],
+        "joy": ["balk"],
+        "whimsy": ["delay", "linger"],
+        "demons": ["doubt"],
+        "raincloud": ["shrink", "falter"],
+        "stargazing": ["ponder", "tarry"]
+    },
+    "halfX":{
+        "all": ["half", "partly", "somewhat", "partially", "slightly", "mostly"]
+    },
+    "Xset":{
+        "all": ["set", "dried", "settled", "stated"],
+        "magma": ["arid", "torrid", "baked"],
+        "fear": ["bare", "dehydrated", "parched"],
+        "concrete": ["$Xset.all", "decided", "rooted", "fixed"],
+        "joy": ["rooted", "hitched"],
+        "whimsy": ["hitched", "anchored"],
+        "demons": ["stale", "barren", "cooked"],
+        "raincloud": ["entrenched", "secure", "stable"],
+        "stargazing": ["defined", "established"]
+    },
+    "againX":{
+        "all": ["again", "anew", "newly", "once more", "further", "afresh"]
+    },
+    "wetThing":{
+        "all": ["concrete", "paint", "asphalt", "blacktop", "cement"],
+        "magma": ["magma", "glass", "varnish"],
+        "fear": ["enamel", "latex", "calcium"],
+        "concrete": ["$wetThing.all", "stability", "adhesive", "grout"],
+        "joy": ["paint", "acrylic", "oil", "dye"],
+        "whimsy": ["song", "music", "freedom"],
+        "demons": ["blood", "gore", "carnage"],
+        "raincloud": ["lachryma", "woe", "sob"],
+        "stargazing": ["stardust", "ether", "wonder"]
+    },
+    "changeVerb":{
+        "all": ["change"],
+        "magma": ["modulate", "temper", "atrophy"],
+        "fear": ["convert", "distort", "diminish"],
+        "concrete": ["evolve", "transform", "alter", "adjust", "modify"],
+        "joy": ["renew", "restore", "revive", "rejuvenate", "revitalize"],
+        "whimsy": ["transubstantiate", "vacillate", "reincarnate"],
+        "demons": ["mutate", "ruin", "resurrect", "collapse"],
+        "raincloud": ["diminish", "vary", "become"],
+        "stargazing": ["metamorphosize", "revolve", "awaken", "become"]
+    },
+    "changingThing":{
+        "all": ["butterfly", "season", "tide", "day", "time", "body", "mind", "human", "person"]
+    },
+    "changeNoun":{
+        "all": ["change", "action"],
+        "magma": ["extinction", "wreckage", "atrophy"],
+        "fear": ["conversion", "distortion", "vicissitude"],
+        "concrete": ["evolution", "transformation", "alteration", "adjustment", "modification"],
+        "joy": ["renewal", "restoration", "revival", "rejuvenation", "revitalization"],
+        "whimsy": ["rebirth", "transubstantiation", "renaissance", "reincarnation"],
+        "demons": ["mutation", "ruin", "resurrection", "collapse"],
+        "raincloud": ["variance", "variation", "difference"],
+        "stargazing": ["metamorphisis", "revolution", "awakening"]
+    },
+    "horrorThing":{
+        "all": ["worm", "corpse", "demon", "zombie", "ghost", "ghoul", "nightmare"]
+    },
+    "beyondX":{
+        "all": ["beyond", "outside", "above", "below", "after", "before", "behind", "astride"]
+    },
+    "turnX":{
+        "all":["turn", "transform", "alter", "convert", "mutate", "translate"]
+    },
+    "barelyX":{
+        "all": ["barely", "hardly", "just", "scarcely", "only just"]
+    },
+    "sightNoun": {
+        "all": ["vision", "sight", "eyeline", "eyes", "perception", "eyesight", "ken", "viewing"]
+    },
+    "Xbad": {
+        "all":["terrible", "awful", "bad", "frightful", "frightening"],
+        "magma": ["malignant", "wicked", "evil", "disgraceful"],
+        "fear": ["terrifying", "horrifying", "haunting", "abominable"],
+        "concrete": ["morphing", "unpleasant", "useless"],
+        "joy": ["beckoning", "snarling", "scowling"],
+        "whimsy": ["dire", "dreadful"],
+        "demons": ["sordid", "abysmal", "godawful", "rotten"],
+        "raincloud": ["woeful", "hopeless", "pitiful"],
+        "stargazing": ["gray", "shimmering", "flickering"]
+    },
+    "needX":{
+        "all": ["need to", "should", "ought to", "must", "have to"]
+    },
+    "Xleave": {
+        "all": ["leave", "go", "depart"],
+        "magma": ["withdraw", "concede", "surrender"],
+        "fear": ["run", "escape", "get out"],
+        "concrete": ["$Xleave.all"],
+        "joy": ["carry on"],
+        "whimsy": ["away", "float on"],
+        "demons": ["wither", "lose", "accept defeat", "$Xleave.magma"],
+        "raincloud": ["abandon this", "perish", "give up"],
+        "stargazing": ["$Xleave.whimsy", "$Xleave.joy"]
+    },
+    "maybeX":{
+        "all": ["maybe", "perhaps", "conceivably", "surely", "it is $possibleX.all"]
+    },
+    "possibleX":{
+        "all": ["possible", "possible", "possible", "conceivable", "implicit", "probable"]
+    },
+    "goodNeutral": {
+        "all": ["right", "okay", "alright", "benign"],
+        "magma": ["just", "valid", "innocuous", "inoffensive"],
+        "fear": ["sound", "safe", "expected", "anticipated", "known", "anodyne"],
+        "concrete": ["proper", "square", "normal", "steady", "proper"],
+        "joy": ["good", "wonderful", "kind", "friendly", "decent", "happy"],
+        "whimsy": ["so", "singing"],
+        "demons": ["justified"],
+        "raincloud": ["due", "kind"],
+        "stargazing": ["requisite", "curious"]
+    },
+    "quiteX":{
+        "all": ["quite", "completely", "totally", "wholly", "utterly", "thoroughly"]
+    },
+    "thereX":{
+        "all": ["there", "this", "that"]
+    },
+    "somethingX":{
+        "all": ["something", "this", "that", "it", "nothing", "all"]
+    },
+    "thoughtVerb":{
+        "all": ["thought", "believed", "felt", "supposed", "figured", "reckoned"]
+    },
+    "shouldX":{
+        "all": ["$needX","should", "could", "would", "will", "might", "shall", "can", "ought to"]
+    },
+    "shouldWhat":  {
+        "magma": ["be different", "be better than this", "just end", "be destroyed"],
+        "fear": ["be brighter", "not be so quiet", "be different", "clarify"],
+        "concrete": ["stay the same", "static", "be concrete", "stay stable"],
+        "joy": ["make you happy", "be better", "be joyful", "be pleasant"],
+        "whimsy": ["be magic", "be starry", "be like the moon", "be soulful"],
+        "demons": ["be haunting", "be ghostly", "be tragic", "be heavy"],
+        "raincloud": ["slow down", "be painless", "be less", "be lighter"],
+        "stargazing": ["be as one", "enlighten", "inspire", "fascinate"]
+    },
+    "demandingX":{
+        "magma": ["demanding", "requiring", "charging"],
+        "fear": ["begging for", "needing", "clamoring for"],
+        "concrete": ["calling for", "soliciting", "appealing for"],
+        "joy": ["hoping for", "calling for", "wanting"],
+        "whimsy": ["hoping for", "singing for", "wanting"],
+        "demons": ["screaming for", "demanding", "charging"],
+        "raincloud": ["needing", "pleading for", "weeping for"],
+        "stargazing": ["searching for", "praying for", "wanting"]
+    },
+    "demandX":{
+        "magma": ["demand", "require", "charge"],
+        "fear": ["beg", "need", "clamor"],
+        "concrete": ["call", "solicit", "appeal", "need"],
+        "joy": ["await", "call", "want"],
+        "whimsy": ["await", "sing", "want"],
+        "demons": ["scream", "demand", "charge"],
+        "raincloud": ["need", "plead", "weep"],
+        "stargazing": ["search", "pray", "want"]
+    },
+    "demandWhat": {
+        "magma": ["retribution", "justice", "an answer"],
+        "fear": ["relief", "clarity", "peace of mind"],
+        "concrete": ["stasis", "stablity", "nothing"],
+        "joy": ["a smile", "sunlight", "joy"],
+        "whimsy": ["adventure", "a dance", "song"],
+        "demons": ["release", "a cleanse", "peace"],
+        "raincloud": ["relief", "an end", "sunlight"],
+        "stargazing": ["my soul", "meaning", "unity"]
+    },
+    "annoyingVerb":{
+        "all": ["grating", "annoying", "vexing", "irritating"]
+    },
+    "annoysVerb":{
+        "all": ["grates", "annoys", "vexes", "irritates"]
+    },
+    "annoyingWhat":{
+        "magma": ["annoyance", "fire", "indignation", "vexation"],
+        "fear": ["horror", "whisper", "shadow", "dread"],
+        "concrete": ["antithesis", "evolution", "change"],
+        "joy": ["frown", "darkness", "teariness"],
+        "whimsy": ["stasis", "boredom", "silence"],
+        "demons": ["laughter", "hopefulness", "peace"],
+        "raincloud": ["sunlight", "smiling", "comfort"],
+        "stargazing": ["mindlessness", "soulessness", "division"]
+    },
+    "hostileWhat": {
+        "magma": ["hostility", "an outrage", "anger", "an inferno"],
+        "fear": ["terror", "panic", "a stampede", "hysteria"],
+        "concrete": ["modification", "a switch", "mutation"],
+        "joy": ["a beam", "a smirk", "laughter"],
+        "whimsy": ["stasis", "stagnation", "boredom"],
+        "demons": ["a knife", "bleeding", "a wound"],
+        "raincloud": ["mockery", "grief", "mourning"],
+        "stargazing": ["a blindfold", "ignorance", "division"]
+    },
+    "sensation":{
+        "magma": ["exasperation", "enimty", "rage"],
+        "fear": ["horror", "fear", "paranoia"],
+        "concrete": ["stillness", "consistency", "stability"],
+        "joy": ["joy", "music", "happiness"],
+        "whimsy": ["adventure", "whimsy", "joy"],
+        "demons": ["demons", "suffering", "my past"],
+        "raincloud": ["tears", "hollowness", "drowning"],
+        "stargazing": ["wonder", "discovery", "curiosity"]
+    },
+    "air":{
+        "magma": ["heat", "magma", "fire"],
+        "fear": ["cool breeze", "worry", "gasp"],
+        "concrete": ["air", "breath"],
+        "joy": ["song", "wind", "warm breeze"],
+        "whimsy": ["laugh", "song", "wind"],
+        "demons": ["fire", "emptiness", "secret"],
+        "raincloud": ["phlegm", "pain", "misery"],
+        "stargazing": ["wind", "hope", "air"]
+    },
+    "loom":{
+        "magma": ["loom", "jeer", "scoff", "taunt", "snipe"],
+        "fear": ["loom", "wait", "brew", "portend", "impend"],
+        "concrete": ["wait", "linger", "sit", "remain", "tarry"],
+        "joy": ["call", "beckon", "smile", "dance", "pause"],
+        "whimsy": ["dance", "shimmer", "shine", "sparkle", "glitter"],
+        "demons": ["fester", "rot", "gurgle", "bleed", "impend"],
+        "raincloud": ["drown", "flood", "sniffle", "weep", "wait"],
+        "stargazing": ["shine", "beckon", "pull", "await", "linger"]
+    },
+    "border": {
+        "magma": ["horizon", "border", "divide", "chasm", "barrier"],
+        "fear": ["spire", "precipice", "threshold", "veil", "fringe"],
+        "concrete": ["wall", "fence", "barrier", "facade", "side"],
+        "joy": ["stream", "river", "mountain", "treeline", "horizon"],
+        "whimsy": ["screen", "enclosure", "threshold", "smile", "horizon"],
+        "demons": ["cliffside", "bluff", "precipice", "promontory", "ridge"],
+        "raincloud": ["peak", "edge", "frown", "teartrack", "rough"],
+        "stargazing": ["meteor", "atmosphere", "world", "ether", "dreamscape"]
+    },
+    "angerVerb":{
+        "magma": ["burn", "smolder", "incinerate", "scorch", "melt", "raze"],
+        "fear": ["taunt", "bedevil", "howl", "terrorize", "trouble"],
+        "concrete": ["ruin", "transform", "alter", "destroy", "wreck"],
+        "joy": ["excite", "worry", "thrill", "astound", "dampen"],
+        "whimsy": ["shush", "still", "close", "squelch", "subdue"],
+        "demons": ["torment", "torture", "agonize", "plague", "burn"],
+        "raincloud": ["rain", "drown", "fret", "weep", "lament"],
+        "stargazing": ["forget", "ignore", "deceive", "blind", "obscure"]
+    },
+    "angryThing":{
+        "magma": ["malcontent", "hell", "scorn", "furor", "hatred"],
+        "fear": ["death", "possession", "the end", "cessation", "scream"],
+        "concrete": ["transformation", "growth", "progress", "sigh"],
+        "joy": ["misery", "lonliness", "anguish", "teardrop"],
+        "whimsy": ["concrete", "apathy", "monotony", "teardrop"],
+        "demons": ["joy", "delight", "alleviation", "release"],
+        "raincloud": ["sunshine", "cheer", "warmth", "giggle"],
+        "stargazing": ["simplicity", "cruelty", "dissonance", "yawn"]
+    },
+    "angryWhat":{
+        "magma": ["hot", "bitter", "furious", "ragged", "tempestuous"],
+        "fear": ["ashen", "ghastly", "grim", "macabre", "lurid"],
+        "concrete": ["pendulous", "oscillating", "unsteady", "changeable"],
+        "joy": ["cold", "unpleasant", "cool", "vibrating", "bubbling"],
+        "whimsy": ["quiet", "stillness", "silence", "cool", "bubbling"],
+        "demons": ["rot", "memory", "history", "corrosion", "mold"],
+        "raincloud": ["floodwater", "misery", "cold", "frigid", "icy"],
+        "stargazing": ["bleak", "dark", "oblivion", "small-minded", "obtuse"]
+    },
+    "body":{
+        "all": ["sinew", "lungs", "heart", "veins", "stomach", "bones", "hands", "eyes", "tongue", "mouth"]
+    },
+    "Xeverything":{
+        "all": ["all", "everything", "it all", "totally", "wholly"]
+    },
+    "everythingX":{
+        "all": ["all", "everything"]
+    },
+    "onlyX":{
+        "all": ["just", "only", "merely", "simply"]
+    },
+    "notScaryThing":{
+        "magma": ["tone", "intonation", "humor", "wit"],
+        "fear": ["wind", "plumbing", "mind", "imagination"],
+        "concrete": ["tide", "orbit", "cycle", "wind"],
+        "joy": ["chord", "night", "tone", "vibe"],
+        "whimsy": ["song", "mood", "quiet", "road"],
+        "demons": ["memory", "sensation", "ache", "rhyme"],
+        "raincloud": ["shadow", "ache", "shallow", "blue"],
+        "stargazing": ["cloud", "fog", "dark", "pall"]
+    },
+    "thingThatSettles":{
+        "magma": ["frown", "place", "madness", "rage"],
+        "fear": ["house", "skeleton", "spirit", "mist"],
+        "concrete": ["ice", "foundation", "concrete", "ground"],
+        "joy": ["smile", "home", "heart", "light"],
+        "whimsy": ["music", "castle", "journey", "soul", "palace"],
+        "demons": ["skeleton", "wound", "heartbreak", "agony"],
+        "raincloud": ["cold", "night", "ache", "pain"],
+        "stargazing": ["light", "enlightenment", "library", "mind"]
+    },
+    "settling":{
+        "all": ["settling", "landing", "gentling", "righting", "sighing"]
+    },
+    "alwaysX":{
+        "all": ["always", "ever", "invariably", "forever"]
+    },
+    "explanation":{
+        "all": ["explanation", "answer", "justification", "reason", "elucidation"]
+    },
+    "Xafraid":{
+        "all": ["so $Xafraid"],
+        "magma": ["scared", "intimidated", "faint-hearted"],
+        "fear": ["afraid", "scared", "frightened"],
+        "concrete": ["worried", "disturbed", "rattled"],
+        "joy": ["fearful", "distressed", "discouraged"],
+        "whimsy": ["hesitant", "perturbed", "dismayed", "daunted"],
+        "demons": ["panicked", "cowardly", "timorous"],
+        "raincloud": ["afraid", "worried", "scared"],
+        "stargazing": ["apprehensive", "shaken", "aghast"]
+    },
+    "tolerable": {
+        "magma": ["tolerable", "bearable", "endurable", "allowable", "fine", "middling", "in order", "adequate"],
+        "fear": ["real", "painless", "harmless", "safe", "okay", "safe", "harmless", "secure"],
+        "concrete": ["calm", "settled", "average", "correct", "stable", "steady", "durable", "reliable"],
+        "joy": ["good", "great", "well", "marvellous","gratifying", "charming", "satisfying", "tickling"],
+        "whimsy": ["wonderful", "lovely", "swell", "grace", "shining","whimsical", "fun", "musical", "flowery"],
+        "demons": ["fine", "tolerable", "innocent", "powerless","tolerable", "present", "endurable"],
+        "raincloud": ["fine", "bearable", "simple", "painless","heartening", "inspiriting", "balming"],
+        "stargazing": ["illuminated", "beautiful", "shining", "exquisite","ethereal", "beautiful", "exquisite", "inspiring"]
+    },
+    "scaryThing":{
+        "magma": ["shock", "grating", "scratch", "barrage", "bang"],
+        "fear": ["knock", "scream", "whisper", "cackle", "scrape", "ghost"],
+        "concrete": ["disturbance", "ripple", "interference", "intrusion"],
+        "joy": ["laugh", "voice", "person", "cry", "worry"],
+        "whimsy": ["musicbox", "bore", "static", "silence", "disturbance"],
+        "demons": ["reminder", "scar", "gash", "knife", "threat"],
+        "raincloud": ["loss", "memory", "whimper", "cackle", "spirit"],
+        "stargazing": ["demon", "static", "blindfold", "cloud", "figure"]
+    },
+    "scaryPlace":{
+        "magma": ["system", "psyche", "throat", "enemy", "fortress", "turret"],
+        "fear": ["attic", "basement", "hall", "bedroom", "kitchen", "alleyway", "dark"],
+        "concrete": ["office", "room", "footing", "base", "structure", "underpinning"],
+        "joy": ["giggle", "sigh", "home", "kitchen", "livingroom", "heart"],
+        "whimsy": ["pirouette", "romp", "caper", "melody", "humor", "spirit"],
+        "demons": ["infection", "blood", "decay", "cancer", "corrosion", "viscera"],
+        "raincloud": ["tearduct", "groan", "moan", "canker", "throat"],
+        "stargazing": ["citadel", "world", "galaxy", "thought", "idea", "species"]
+    },
+    "sensed": {
+        "all": ["saw", "felt", "heard", "tasted", "smelt"]
+    }
+}
