@@ -88,7 +88,7 @@
             "[ $happyNoun :a] at $halfX-$Xmast", 
             "$tactileNatureThing and [ $happyNoun :a]", 
             "my { $extremity :s} in the $tactileNatureThing", 
-            "i'm $warmedVerb by the $cosmicThing", 
+            "i'm $warmVerb by the $cosmicThing", 
             "$annoyingWhat become $demandWhat" 
         ],
         "high": [

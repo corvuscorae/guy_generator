@@ -65,7 +65,7 @@
         "all":[ "mast", "staff", "post", "hail", "height", "full", "kick"]
     },
     "happyNoun":{
-        "all":["music", "song", "melody","tune","harmony","hymn", "grin","laughter","smile","simper"]
+        "all":["music", "song", "melody","tune","harmony","hymn", "grin","laughter"]
     },
     "stopVerb":{
         "all":["stop", "break", "block", "bar", "pause", "cease", "close", "end"]
@@ -74,7 +74,7 @@
         "all":["else", "more", "extra", "spare", "further"]
     },
     "littleX":{
-        "all": ["little", "meager","scant", "diminutive", "infinitesimal", "$barelyX"]
+        "all": ["little", "meager","scant", "$barelyX"]
     },
     "workNoun":{
         "all":["work", "effort", "industry", "production", "struggle", "exertion", "toil", "servitude"]
