@@ -3,14 +3,16 @@
 let globalGuy;
 let clickedSlider;
 let clickedAt;
-let drag;;
+let drag;
 let messages;
 let tone;
 let currentMessage;
+
 function preload() {
-  messages = loadJSON("messages.json");
-  tone = loadJSON("tone_words.json");
+  messages = loadJSON("/json/messages.json");
+  tone = loadJSON("/json/tone_words.json");
 }
+
 function setup() {
   createCanvas(800, 800);
   background(52);
@@ -23,7 +25,6 @@ function setup() {
   makeGuy();
 }
 
-function draw() {}
 function keyPressed() {
   if (keyCode == ENTER) {
     globalGuy.speak(5);
@@ -33,10 +34,12 @@ function keyPressed() {
     copyBlurb();
   }
 }
+
 function mousePressed() {
   clickedAt = createVector(mouseX, mouseY);
   clickedSlider = globalGuy.radar.sliderClicked(clickedAt);
 }
+
 function mouseDragged() {
   if (clickedSlider != null) {
     let rot = clickedSlider.rotation; // - TWO_PI;
@@ -57,10 +60,13 @@ function mouseDragged() {
     */
   }
 }
+
 function mouseReleased() {
   clickedSlider = null;
   globalGuy.self(false);
-} // PatrickJMT my beloved reminded me how this works:
+} 
+
+// PatrickJMT my beloved reminded me how this works:
 // https://www.youtube.com/watch?v=LhL59Ipehms&list=WL&index=2
 function rotatePoint(pt, angle) {
   return createVector(
@@ -68,6 +74,7 @@ function rotatePoint(pt, angle) {
     pt.y * cos(angle) + pt.x * sin(angle)
   );
 }
+
 function makeGuy() {
   // set up
   let CONFIG = messages["CONFIG"];
@@ -82,6 +89,7 @@ function makeGuy() {
   globalGuy.self(true);
   globalGuy.speak(5);
 }
+
 function putInstructions() {
   push();
   fill(0);
@@ -92,6 +100,7 @@ function putInstructions() {
   text("drag sliders to change vibe", 30, 120);
   pop();
 }
+
 function copyBlurb() {
   // if (currentMessage == null) return;
   // if (currentMessage.length() == 0) return;

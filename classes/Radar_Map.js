@@ -70,7 +70,7 @@ class Radar {
 				rotate(rot);
 
 				let name = this.keys[it];
-				let halfWidth = textWidth(name) / 2;
+				let halfWidth = textWidth(name) / 2 + 10;
 
 				fill(currentColor);
 				noStroke();
@@ -131,7 +131,6 @@ class Radar {
 				name = this.keys[it];
 			} else {
 				break;
-				//name = wormName[0); // loop to beginning
 			}
 			w = this.worms[name].level;
 			it++;

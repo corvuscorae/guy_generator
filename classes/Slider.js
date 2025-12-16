@@ -21,16 +21,18 @@ class Slider {
 	// mouse event
 	drag(delta) {
 		let rotatedDelta = rotatePoint(delta, this.rotation);
-
 		this.pos = p5.Vector.add(this.pos, rotatedDelta); 
+		let dir = p5.Vector.sub(this.pos, this.center);
 
-		// got ChatGPT help on constraining to max:
+		if(!this.inQuadrant(dir)){
+			this.pos = this.center;
+		}
+
+		// got ChatGPT help on constraining to max (first query):
 		// https://chatgpt.com/share/68e5ebff-6410-8012-9985-8b676ab1a5ef
-		// note: I have yet to get min-clamping (second question in convo) to work
 		let dist = p5.Vector.dist(this.pos, this.center);
 		if (dist > this.maxDist) {
-			// Move this.pos back onto circle edge
-			let dir = p5.Vector.sub(this.pos, this.center);
+			// move this.pos back onto circle edge
 			dir.normalize();
 			dir.mult(this.maxDist);
 			this.pos = p5.Vector.add(this.center, dir);
@@ -46,7 +48,6 @@ class Slider {
 		newLevel = map(newLevel, 0, this.maxDist, this.maxLevel, 0);
 		return newLevel;
 	}
-
 
 	show() {
 		push();
@@ -67,5 +68,31 @@ class Slider {
 			pt.y <= this.pos.y + threshold &&
 			pt.y >= this.pos.y - threshold
 		);
+	}
+
+	inQuadrant(dir){
+		// bottom right
+		if(this.rotation >= 0 && this.rotation < Math.PI / 2){
+			if(dir.x >= 0 && dir.y >= 0) return true;
+			else return false;
+		}
+
+		// bottom left
+		if(this.rotation >= Math.PI / 2 && this.rotation < Math.PI){
+			if(dir.x <= 0 && dir.y >= 0) return true;
+			else return false;
+		}
+
+		// top left
+		if(this.rotation >= Math.PI && this.rotation < 3 * Math.PI / 2){
+			if(dir.x <= 0 && dir.y <= 0) return true;
+			else return false;
+		}
+
+		// top right
+		if(this.rotation >= 3 * Math.PI / 2 && this.rotation < 2 * Math.PI){
+			if(dir.x >= 0 && dir.y <= 0) return true;
+			else return false;
+		}
 	}
 }
