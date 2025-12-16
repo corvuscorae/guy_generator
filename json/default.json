@@ -1,12 +1,4 @@
-{ 
-    "CONFIG": {
-        "WORMS": [
-            "joy", "whimsy", "demons", "raincloud", "stargazing",
-            "magma", "fear", "concrete"
-        ],
-        "DYNAMO_WORMS":["magma", "fear", "concrete","joy"],
-        "RANGE": [0, 10]
-    },
+{
     "magma": {
         "low": [
             "it $shouldX $shouldWhat", 

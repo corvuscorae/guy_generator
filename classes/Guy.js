@@ -16,15 +16,9 @@ class Guy {
 		this.radar = new Radar(this.worms, this.wormName, this.range, 200);
 	}
 
-	speak(lines) {
-		// TEMP: just get the worms whose lines have been grammar-ed
-		let CONFIG = messages["CONFIG"];
-		let _gWORMS = CONFIG["DYNAMO_WORMS"];
-		let gWORMS = []
-		for (let i = 0; i < _gWORMS.length; i++) {
-			gWORMS.push(_gWORMS[i]);
-		}
-		let message = this.voice.speak(gWORMS, lines);
+	speak(what, lines) {
+		let cat_worms = Object.keys(messages[what])
+		let message = this.voice.speak(what, cat_worms, lines);
 
         // put message on screen
 		let msg = "";

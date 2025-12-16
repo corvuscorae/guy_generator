@@ -4,12 +4,13 @@ class Voice{
     this.fillers = tone; 
   }
 
-  speak(categories, lines){
+  speak(what, categories, lines){
     let soliloquy = []
+    console.log(categories)
   
     while(soliloquy.length < lines){
       let category = categories[Math.floor(random(categories.length))];
-      let message = messages[category];
+      let message = messages[what][category];
       
       let level = this.g.getLevel(category);
       if(level == 0) continue;

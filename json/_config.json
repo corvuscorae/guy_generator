@@ -1,0 +1,7 @@
+{ 
+    "WORMS": [
+        "joy", "whimsy", "demons", "raincloud", "stargazing",
+        "magma", "fear", "concrete"
+    ],
+    "RANGE": [0, 10]
+}

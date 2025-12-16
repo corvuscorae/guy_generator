@@ -9,7 +9,11 @@ let tone;
 let currentMessage;
 
 function preload() {
-  messages = loadJSON("/json/messages.json");
+  messages = {
+    config: loadJSON("/json/_config.json"),
+    default: loadJSON("/json/default.json"),
+    greeting: loadJSON("/json/greeting.json"),
+  }
   tone = loadJSON("/json/tone_words.json");
 }
 
@@ -77,17 +81,15 @@ function rotatePoint(pt, angle) {
 
 function makeGuy() {
   // set up
-  let CONFIG = messages["CONFIG"];
-  let _WORMS = CONFIG["WORMS"];
-  let WORMS = []
-  for (let i = 0; i < _WORMS.length; i++) {
-    WORMS.push(_WORMS[i]);
-  }
-  let _range = CONFIG["RANGE"];
-  let range = [_range[0], _range[1]]; // make guy
-  globalGuy = new Guy(WORMS, range);
+  let CONFIG = messages.config;
+  let WORMS = CONFIG["WORMS"];
+  
+  let _r = CONFIG["RANGE"];
+  let range = [_r[0], _r[1]]; 
+
+  globalGuy = new Guy(WORMS, range); // make guy
   globalGuy.self(true);
-  globalGuy.speak(5);
+  globalGuy.speak("default", 5);
 }
 
 function putInstructions() {

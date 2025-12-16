@@ -1,0 +1,24 @@
+{
+    "magma": {
+        "low": [
+            "it $shouldX $shouldWhat"
+        ],
+        "medium": [
+            "$sensation, the $air in my $body.all"
+        ],
+        "high": [
+            "$hostileWhat { $angerVerb :s}, $angryWhat in my $body.all"
+        ]
+    },
+    "fear": {
+        "low": [
+            "it's $onlyX.all the $notScaryThing"
+        ],
+        "medium": [
+            "$thereX.all is no $notScaryThing"
+        ],
+        "high": [
+            "we $needX $Xleave"
+        ]
+    }
+}
