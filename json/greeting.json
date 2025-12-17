@@ -1,50 +1,50 @@
 {
     "base": [
-        "$salutation$punctuation $smalltalk"
+        "$salutation>punctuation $smalltalk"
     ],
     "all": {
         "salutation": ["hello", "hi"],
-        "punctuation": ["."],
+        "punctuation": [".", "!"],
         "smalltalk": ["rainy day"]
     },
     "magma": {
-        "salutation": ["hello", "hi"],
-        "punctuation": ["."],
-        "smalltalk": ["rainy day"]
+        "salutation": ["what", "hey", "morning"],
+        "punctuation": [".", "?"],
+        "smalltalk": ["magma day"]
     },
     "fear": {
-        "salutation": ["hello", "hi"],
-        "punctuation": ["."],
-        "smalltalk": ["rainy day"]
+        "salutation": ["who's there", "hello", "what's happening"],
+        "punctuation": ["?"],
+        "smalltalk": ["fear day"]
     },
     "concrete": {
-        "salutation": ["hello", "hi"],
+        "salutation": [],
         "punctuation": ["."],
-        "smalltalk": ["rainy day"]
+        "smalltalk": ["concrete day"]
     },
     "joy": {
-        "salutation": ["hello", "hi"],
-        "punctuation": ["."],
-        "smalltalk": ["rainy day"]
+        "salutation": ["howdy", "hi-ya", "buenos dias"],
+        "punctuation": ["!"],
+        "smalltalk": ["joy day"]
     },
     "whimsy": {
-        "salutation": ["hello", "hi"],
-        "punctuation": ["."],
-        "smalltalk": ["rainy day"]
+        "salutation": ["greetings", "good morrow", "how goes it"],
+        "punctuation": ["!"],
+        "smalltalk": ["whimsy day"]
     },
     "demons": {
-        "salutation": ["hello", "hi"],
+        "salutation": ["hey", "what"],
         "punctuation": ["."],
-        "smalltalk": ["rainy day"]
+        "smalltalk": ["demons day"]
     },
     "raincloud": {
-        "salutation": ["hello", "hi"],
+        "salutation": ["hey", "hello"],
         "punctuation": ["."],
-        "smalltalk": ["rainy day"]
+        "smalltalk": ["raincloud day"]
     },
     "stargazing": {
-        "salutation": ["hello", "hi"],
-        "punctuation": ["."],
-        "smalltalk": ["rainy day"]
+        "salutation": ["welcome", "greetings", "bonjour"],
+        "punctuation": ["!"],
+        "smalltalk": ["stargazing day"]
     }
 }

@@ -1,14 +1,18 @@
 class Guy {
-	constructor(names, range){
+	constructor(names, range, temperature){
 		this.worms = {};
 		this.wormName = names;
 		this.range = (range) ? range : [0 ,10]
 		this.radius = 200;
 	
-		this.bigWorms = []
-		this.highLevel = this.range[1] + 1;
 		this.radar = null;
 		this.voice = null;
+
+		// how wild is this guy. 
+		// higher temperature => single statements draw from more high-level worms
+		// so a joyful, angry person will say things that encasulate that entire range of worms
+		// lower temp will have more grounded statements; statements are only angry or only joyful
+		this.temperature = Math.min(temperature, this.range[1]) || 2;
 		
 		this.initWormMap();
 		
@@ -66,18 +70,28 @@ class Guy {
 		}
 	}
 
-	getHighLevelWorm() {
-		while (this.bigWorms.length < 2) {
-			this.highLevel--;
+	getHighLevelWorms(poolSize) {
+		if(!poolSize || poolSize === 0) return null;
 
-			// fill this.bigWorms
+		let bigWorms = [];
+		let highLevel = this.range[1] + 1;
+
+		while (bigWorms.length < poolSize && highLevel > this.range[1] / 2) {
+			highLevel--;
+
+			// fill bigWorms
 			for (let name of this.wormName) {
 				let wormLevel = this.worms[name].level;
-
-				if (wormLevel >= this.highLevel) this.bigWorms.push(name);
+				if (wormLevel >= highLevel) {
+					bigWorms.push(name);
+					if(bigWorms.length === poolSize) break;
+				}
 			}
 		}
-		//console.log(this.bigWorms);
-		return this.bigWorms[Math.floor(random(this.bigWorms.length))];
+
+		if(bigWorms.length === 0) return null;
+
+		//console.log(bigWorms);
+		return bigWorms;
 	}
 }

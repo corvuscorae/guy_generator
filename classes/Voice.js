@@ -56,31 +56,53 @@ class Voice {
   fillGrammarTemplate(template, json) {
     // console.log(template);
 
-    //*** look for ${A} patterns ***//
-    let slotPatternB = /\$(\w+)/;
-
-    while (template.match(slotPatternB)) {
-      template = template.replace(slotPatternB, (match, capture) => {
-        // captureGroup -> "noun"
-        let fillerKey = capture; // "noun"
-        let param = this.g.getHighLevelWorm(); // "fear"
-
-        let options = json[param][fillerKey];
-        if (options == null || options.size === 0) {
-          options = json.all[fillerKey];  // get generic fill
-
-          if (options == null || options.size === 0) { return capture; } // if still null
-        }
-
-        let word = random(options);
-        return word;
-      });
-    }
+    template = this.handleFills(template, json, ">");
+    template = this.handleFills(template, json);
 
     template = this.handlePlurals(template);      // handle plurals
     template = this.handleIndefArticle(template); // handle words that need a/an before it
 
     return template;
+  }
+
+  handleFills(template, json, separator){
+    if(!separator){ separator = ""; }
+    let slotPattern = new RegExp(`\\$(\\w+${separator}\\w+)`);
+
+    while (template.match(slotPattern)) {
+      template = template.replace(slotPattern, (match, capture) => {
+        let parts = (separator.length > 0) ? capture.split(separator) : capture;
+        // captureGroup -> "noun"
+        
+        const param = this.g.getHighLevelWorms(this.g.temperature) || "all"; 
+        if(typeof(parts) === "object") return this.fillSplit(parts, json, param);
+        else return this.fillSingle(parts, json, param);
+      });
+    }
+
+    return template;
+  }
+
+  fillSplit(fill, json, param){
+    const pickedParam = random(param);
+    const fillA = this.fillSingle(fill[0], json, pickedParam); 
+    const fillB = this.fillSingle(fill[1], json, pickedParam); 
+
+    return fillA + fillB;
+  }
+
+  fillSingle(filler, json, param){
+    let pickedParam = (typeof(param) === "object") ? random(param) : param;
+
+    let options = json[pickedParam][filler];
+    if (options == null || options.length === 0) {
+      options = json.all[filler];  // get generic fill
+
+      if (options == null || options.length === 0) { return capture; } // if still null
+    }
+
+    let word = random(options);
+    return word;
   }
 
   handlePlurals(template){

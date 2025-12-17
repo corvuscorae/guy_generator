@@ -60,7 +60,7 @@ class Slider {
 	}
 
 	near(pt) {
-		let threshold = 20;
+		let threshold = 5;
 
 		return (
 			pt.x <= this.pos.x + threshold &&
