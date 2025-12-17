@@ -16,9 +16,8 @@ class Guy {
 		this.radar = new Radar(this.worms, this.wormName, this.range, 200);
 	}
 
-	speak(what, lines) {
-		let cat_worms = Object.keys(messages[what])
-		let message = this.voice.speak(what, cat_worms, lines);
+	speak(type, lines) {
+		let message = this.voice.speak(messages[type], lines);
 
         // put message on screen
 		let msg = "";

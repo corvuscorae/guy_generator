@@ -8,13 +8,16 @@ let messages;
 let tone;
 let currentMessage;
 
+const TEST_CAT = "greeting"
+const TEST_LINES = 1
+
 function preload() {
   messages = {
     config: loadJSON("/json/_config.json"),
     default: loadJSON("/json/default.json"),
     greeting: loadJSON("/json/greeting.json"),
   }
-  tone = loadJSON("/json/tone_words.json");
+  tone = loadJSON("/json/thesaurus.json");
 }
 
 function setup() {
@@ -31,7 +34,7 @@ function setup() {
 
 function keyPressed() {
   if (keyCode == ENTER) {
-    globalGuy.speak(5);
+    globalGuy.speak(TEST_CAT, TEST_LINES);
   } else if (keyCode == TAB) {
     makeGuy();
   } else if (keyCode == 67) {
@@ -89,7 +92,7 @@ function makeGuy() {
 
   globalGuy = new Guy(WORMS, range); // make guy
   globalGuy.self(true);
-  globalGuy.speak("default", 5);
+  globalGuy.speak(TEST_CAT, TEST_LINES);
 }
 
 function putInstructions() {
