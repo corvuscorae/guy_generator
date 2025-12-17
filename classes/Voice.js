@@ -1,15 +1,17 @@
 class Voice {
-  constructor(_g) {
+  constructor(_g, messages) {
     this.g = _g;
+    this.messages = messages;
   }
 
-  speak(json, lines) {
+  speak(type, lines) {
     // pick a base
     let soliloquy = [];
+    let json = this.messages[type];
 
     while (soliloquy.length < lines) {
       const base = random(json.base);
-      soliloquy.push(this.fillGrammarTemplate(base, json));
+      soliloquy.push(this.fillGrammarTemplate(base, type));
     }
 
     return soliloquy;
@@ -53,11 +55,12 @@ class Voice {
 
   // using a reworked version of a grammar handler from a past project of mine:
   // https://github.com/llwatkin/final-project/blob/main/js/lore/grammar_handling.js
-  fillGrammarTemplate(template, json) {
-    // console.log(template);
-
+  fillGrammarTemplate(template, type) {
+    let json = this.messages[type];
     template = this.handleFills(template, json, ">");
     template = this.handleFills(template, json);
+
+    template = this.handleReroute(template, json)
 
     template = this.handlePlurals(template);      // handle plurals
     template = this.handleIndefArticle(template); // handle words that need a/an before it
@@ -74,7 +77,7 @@ class Voice {
         let parts = (separator.length > 0) ? capture.split(separator) : capture;
         // captureGroup -> "noun"
         
-        const param = this.g.getHighLevelWorms(this.g.temperature) || "all"; 
+        const param = this.g.getHighLevelWorms(this.g.temperature) || ["all"]; 
         if(typeof(parts) === "object") return this.fillSplit(parts, json, param);
         else return this.fillSingle(parts, json, param);
       });
@@ -103,6 +106,20 @@ class Voice {
 
     let word = random(options);
     return word;
+  }
+
+  handleReroute(template){
+    // ?[small_talk/weather]
+    let slotPattern = new RegExp(`\\?\\[(\\w+)\\]`);
+
+    while (template.match(slotPattern)) {
+      template = template.replace(slotPattern, (match, capture) => {
+        const base = random(this.messages[capture].base);
+        return this.fillGrammarTemplate(base, capture);
+      });
+    }
+
+    return template;
   }
 
   handlePlurals(template){

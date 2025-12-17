@@ -16,12 +16,12 @@ class Guy {
 		
 		this.initWormMap();
 		
-		this.voice = new Voice(this);
+		this.voice = new Voice(this, messages);
 		this.radar = new Radar(this.worms, this.wormName, this.range, 200);
 	}
 
 	speak(type, lines) {
-		let message = this.voice.speak(messages[type], lines);
+		let message = this.voice.speak(type, lines);
 
         // put message on screen
 		let msg = "";

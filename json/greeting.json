@@ -5,46 +5,38 @@
     "all": {
         "salutation": ["hello", "hi"],
         "punctuation": [".", "!"],
-        "smalltalk": ["rainy day"]
+        "smalltalk": ["?[weather]"]
     },
     "magma": {
         "salutation": ["what", "hey", "morning"],
-        "punctuation": [".", "?"],
-        "smalltalk": ["magma day"]
+        "punctuation": [".", "?"]
     },
     "fear": {
         "salutation": ["who's there", "hello", "what's happening"],
-        "punctuation": ["?"],
-        "smalltalk": ["fear day"]
+        "punctuation": ["?"]
     },
     "concrete": {
         "salutation": [],
-        "punctuation": ["."],
-        "smalltalk": ["concrete day"]
+        "punctuation": ["."]
     },
     "joy": {
         "salutation": ["howdy", "hi-ya", "buenos dias"],
-        "punctuation": ["!"],
-        "smalltalk": ["joy day"]
+        "punctuation": ["!"]
     },
     "whimsy": {
         "salutation": ["greetings", "good morrow", "how goes it"],
-        "punctuation": ["!"],
-        "smalltalk": ["whimsy day"]
+        "punctuation": ["!"]
     },
     "demons": {
         "salutation": ["hey", "what"],
-        "punctuation": ["."],
-        "smalltalk": ["demons day"]
+        "punctuation": ["."]
     },
     "raincloud": {
         "salutation": ["hey", "hello"],
-        "punctuation": ["."],
-        "smalltalk": ["raincloud day"]
+        "punctuation": ["."]
     },
     "stargazing": {
         "salutation": ["welcome", "greetings", "bonjour"],
-        "punctuation": ["!"],
-        "smalltalk": ["stargazing day"]
+        "punctuation": ["!"]
     }
 }

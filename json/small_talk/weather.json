@@ -1,0 +1,32 @@
+{
+    "base": [
+        "$meep"
+    ],
+    "all": {
+        "meep": ["weather test"]
+    },
+    "magma": {
+        "meep": ["magma weather test"]
+    },
+    "fear": {
+        "meep": ["fear weather test"]
+    },
+    "concrete": {
+        "meep": ["concrete weather test"]
+    },
+    "joy": {
+        "meep": ["joy weather test"]
+    },
+    "whimsy": {
+        "meep": ["whimsy weather test"]
+    },
+    "demons": {
+        "meep": ["demons weather test"]
+    },
+    "raincloud": {
+        "meep": ["raincloud weather test"]
+    },
+    "stargazing": {
+        "meep": ["stargazing weather test"]
+    }
+}
