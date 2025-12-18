@@ -61,11 +61,11 @@ class Voice {
   // https://github.com/llwatkin/final-project/blob/main/js/lore/grammar_handling.js
   fillGrammarTemplate(template, type) {
     let json = (typeof(type) === "string") ? this.messages[type] : type;
-    template = this.handleFills(template, json, `\\$(\\w+>\\w+)`, {
-      separator: ">",
-    });
+    template = this.handleFills(template, json, `\\$(\\w+>\\w+)`, { splitter: ">" });
     template = this.handleFills(template, json, `\\$(\\w+)`);
-    template = this.handleFills(template, json, `\\>(\\w+)`, { getParam: ">" });
+    // template = this.handleFills(template, json, `\\>(\\w+)`, { getParam: ">" });
+
+    template = this.handleFills(template, json, `\\$\\[(\\w+\\]\\w+)`, { splitter: "]", getParam: true});
 
     template = this.handleReroute(template, json);
 
@@ -80,10 +80,14 @@ class Voice {
 
     while (template.match(slotPattern)) {
       template = template.replace(slotPattern, (match, capture) => {
-        let parts = (sp && sp.separator) ? capture.split(sp.separator) : capture;
+        let parts = (sp && sp.splitter) ? capture.split(sp.splitter) : capture;
         // captureGroup -> "noun"
 
-        let param = (sp && sp.getParam) ? this.getParam(match) : null;
+        let param;
+        if(sp && sp.getParam) {
+          param = parts[0];
+          parts = parts[1];
+        }
         if(!param) param = this.g.getHighLevelWorms(this.g.temperature) || ["all"];
 
         if (typeof parts === "object")
@@ -93,10 +97,6 @@ class Voice {
     }
 
     return template;
-  }
-
-  getParam(match) {
-    return this.fills[match].worm
   }
 
   fillSplit(fill, json, param) {
