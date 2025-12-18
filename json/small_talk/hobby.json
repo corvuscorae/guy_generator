@@ -1,0 +1,32 @@
+{
+    "base": [
+        "been $hobby"
+    ],
+    "all": {
+        "hobby": ["default"]
+    },
+    "magma": {
+        "hobby": [">_wrestling"],
+        "wrestling": {
+            "base": ["$doing $where"],
+            "all": {
+                "doing": ["hitting", "fighting in", "getting in"],
+                "where": ["the mat", "the ring"]
+            }
+        }
+    },
+    "fear": {
+    },
+    "concrete": {
+    },
+    "joy": {
+    },
+    "whimsy": {
+    },
+    "demons": {
+    },
+    "raincloud": {
+    },
+    "stargazing": {
+    }
+}

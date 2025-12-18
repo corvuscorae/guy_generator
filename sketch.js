@@ -18,6 +18,7 @@ function preload() {
     default: loadJSON("/json/default.json"),
     greeting: loadJSON("/json/greeting.json"),
     weather: loadJSON("/json/small_talk/weather.json"),
+    hobby: loadJSON("/json/small_talk/hobby.json"),
   }
   tone = loadJSON("/json/thesaurus.json");
 }

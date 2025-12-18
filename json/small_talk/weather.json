@@ -1,52 +1,53 @@
 {
     "base": [
         "$descriptor $weather $time, $confirm?",
-        "$descriptor $weather $time>punctuation"
+        "$descriptor $weather $time>punctuation",
+        "$experiencing that $weather?"
     ],
     "all": {
         "descriptor": ["some"],
-        "weather": ["weather"],
+        "weather": ["weather", "wind", "rain", "sunshine", "fog"],
         "time": ["today", "this week", "lately"],
         "confirm": ["isn't it", "am i right", "huh", "no"],
-        "punctuation": ["."]
+        "punctuation": ["."],
+        "experiencing": ["feeling"]
     },
     "magma": {
         "descriptor": ["shitty", "awful", "ugly"],
-        "weather": ["weather"],
-        "punctuation": ["."]
+        "punctuation": ["."],
+        "experiencing": ["stomaching", "submitting to", "putting up with"]
     },
     "fear": {
         "descriptor": ["scary", "eerie", "forboding"],
-        "weather": ["weather"],
-        "punctuation": [".", "?"]
+        "punctuation": [".", "..."],
+        "experiencing": ["seeing", "hearing", "noticing"]
     },
     "concrete": {
-        "descriptor": [],
         "weather": ["weather"]
     },
     "joy": {
         "descriptor": ["beautiful", "lovely", "pleasant"],
-        "weather": ["weather"],
-        "punctuation": [".", "!", "!!"]
+        "punctuation": [".", "!", "!!"],
+        "experiencing": ["enjoying", "delighting in", "loving"]
     },
     "whimsy": {
         "descriptor": ["beauteous", "gorgeous", "splendid"],
-        "weather": ["weather"],
-        "punctuation": [".", "!", "!!"]
+        "punctuation": [".", "!", "!!"],
+        "experiencing": ["rollicking in", "relishing", "lapping up"]
     },
     "demons": {
         "descriptor": ["terrible", "disastrous", "odious"],
-        "weather": ["weather"],
-        "punctuation": ["."]
+        "punctuation": ["."],
+        "experiencing": ["abhoring", "suffering", "rotting in"]
     },
     "raincloud": {
         "descriptor": ["rotten", "crummy", "lousy"],
-        "weather": ["weather"],
-        "punctuation": ["."]
+        "punctuation": ["."],
+        "experiencing": ["noticing", "minding", "enduring"]
     },
     "stargazing": {
         "descriptor": ["radiant", "heavenly" , "magnificent"],
-        "weather": ["weather"],
-        "punctuation": [".", "!", "!!"]
+        "punctuation": [".", "!", "!!"],
+        "experiencing": ["savoring", "luxuriating in", "knowing"]
     }
 }

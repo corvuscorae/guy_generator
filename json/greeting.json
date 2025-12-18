@@ -5,11 +5,11 @@
     "all": {
         "salutation": ["hello", "hi"],
         "punctuation": [".", "!"],
-        "smalltalk": ["?[weather]"]
+        "smalltalk": ["?[weather]", "?[hobby]"]
     },
     "magma": {
         "salutation": ["what", "hey", "morning"],
-        "punctuation": [".", "?"]
+        "punctuation": ["."]
     },
     "fear": {
         "salutation": ["who's there", "hello", "what's happening"],
