@@ -69,8 +69,7 @@ class Voice {
 
     template = this.handleReroute(template, json);
 
-    template = this.handlePlurals(template); // handle plurals
-    template = this.handleIndefArticle(template); // handle words that need a/an before it
+    template = this.cleanup(template);
 
     return template;
   }
@@ -144,6 +143,45 @@ class Voice {
       template = template.replace(slotPattern, (match, capture) => {
         const base = random(this.messages[capture].base);
         return this.fillGrammarTemplate(base, capture);
+      });
+    }
+
+    return template;
+  }
+
+  cleanup(template){
+    // grammar stuff
+    template = this.handlePreposition(template);
+    template = this.handlePlurals(template);      
+    template = this.handleIndefArticle(template); // handle words that need a/an before it
+
+    // get rid of extra spaces
+    template = template.replace(/ +/g, " ");
+
+    return template;
+  }
+
+  handlePreposition(template){
+    let slotPatternP = new RegExp(`\\{p\\} \\{p\\: (\\w+)\\}`);
+
+    while (template.match(slotPatternP)) {
+      template = template.replace(slotPatternP, (match, word, modifier) => {
+        return word;
+      });
+    }
+
+    // get rid of stragglers
+    slotPatternP = new RegExp(`\\{p\\}`);
+    while (template.match(slotPatternP)) {
+      template = template.replace(slotPatternP, (match, word, modifier) => {
+        return "";
+      });
+    }
+
+    slotPatternP = new RegExp(`\\{p\\: (\\w+)\\}`);
+    while (template.match(slotPatternP)) {
+      template = template.replace(slotPatternP, (match, word, modifier) => {
+        return "";
       });
     }
 

@@ -10,8 +10,8 @@
         "wrestling": {
             "base": ["$doing $where"],
             "all": {
-                "doing": ["hitting", "fighting in", "getting in"],
-                "where": ["the mat", "the ring"]
+                "doing": ["hitting", "fighting {p}", "getting {p}"],
+                "where": ["{p: on} the mat", "{p: in} the ring"]
             }
         }
     },
