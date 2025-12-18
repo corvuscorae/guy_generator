@@ -14,7 +14,7 @@ const TEST_TEMP = 2;
 
 function preload() {
   messages = {}
-  messages.config =   loadJSON("./json/_config.json");
+  messages.config =   loadJSON("./json/0_config.json");
   messages.default =  loadJSON("./json/default.json");
   messages.greeting = loadJSON("./json/greeting.json");
   messages.weather =  loadJSON("./json/small_talk/weather.json");
