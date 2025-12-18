@@ -26,7 +26,7 @@ class Guy {
         // put message on screen
 		let msg = "";
 		for (let bar of message) {
-			msg += bar + ". ";
+			msg += bar; // + ". ";
 		}
 
 		push();

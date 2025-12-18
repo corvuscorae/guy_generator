@@ -1,32 +1,52 @@
 {
     "base": [
-        "$meep"
+        "$descriptor $weather $time, $confirm?",
+        "$descriptor $weather $time>punctuation"
     ],
     "all": {
-        "meep": ["weather test"]
+        "descriptor": ["some"],
+        "weather": ["weather"],
+        "time": ["today", "this week", "lately"],
+        "confirm": ["isn't it", "am i right", "huh", "no"],
+        "punctuation": ["."]
     },
     "magma": {
-        "meep": ["magma weather test"]
+        "descriptor": ["shitty", "awful", "ugly"],
+        "weather": ["weather"],
+        "punctuation": ["."]
     },
     "fear": {
-        "meep": ["fear weather test"]
+        "descriptor": ["scary", "eerie", "forboding"],
+        "weather": ["weather"],
+        "punctuation": [".", "?"]
     },
     "concrete": {
-        "meep": ["concrete weather test"]
+        "descriptor": [],
+        "weather": ["weather"]
     },
     "joy": {
-        "meep": ["joy weather test"]
+        "descriptor": ["beautiful", "lovely", "pleasant"],
+        "weather": ["weather"],
+        "punctuation": [".", "!", "!!"]
     },
     "whimsy": {
-        "meep": ["whimsy weather test"]
+        "descriptor": ["beauteous", "gorgeous", "splendid"],
+        "weather": ["weather"],
+        "punctuation": [".", "!", "!!"]
     },
     "demons": {
-        "meep": ["demons weather test"]
+        "descriptor": ["terrible", "disastrous", "odious"],
+        "weather": ["weather"],
+        "punctuation": ["."]
     },
     "raincloud": {
-        "meep": ["raincloud weather test"]
+        "descriptor": ["rotten", "crummy", "lousy"],
+        "weather": ["weather"],
+        "punctuation": ["."]
     },
     "stargazing": {
-        "meep": ["stargazing weather test"]
+        "descriptor": ["radiant", "heavenly" , "magnificent"],
+        "weather": ["weather"],
+        "punctuation": [".", "!", "!!"]
     }
 }

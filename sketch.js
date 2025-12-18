@@ -10,7 +10,7 @@ let currentMessage;
 
 const TEST_CAT = "greeting"
 const TEST_LINES = 1
-const TEST_TEMP = 1;
+const TEST_TEMP = 2;
 
 function preload() {
   messages = {
