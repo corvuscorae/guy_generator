@@ -14,13 +14,13 @@ const TEST_TEMP = 2;
 
 function preload() {
   messages = {
-    config: loadJSON("/json/_config.json"),
-    default: loadJSON("/json/default.json"),
-    greeting: loadJSON("/json/greeting.json"),
-    weather: loadJSON("/json/small_talk/weather.json"),
-    hobby: loadJSON("/json/small_talk/hobby.json"),
+    config:   loadJSON("./json/_config.json"),
+    default:  loadJSON("./json/default.json"),
+    greeting: loadJSON("./json/greeting.json"),
+    weather:  loadJSON("./json/small_talk/weather.json"),
+    hobby:    loadJSON("./json/small_talk/hobby.json"),
   }
-  tone = loadJSON("/json/thesaurus.json");
+  tone = loadJSON("./json/thesaurus.json");
 }
 
 function setup() {
