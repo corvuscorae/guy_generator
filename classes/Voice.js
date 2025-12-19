@@ -1,8 +1,9 @@
 class Voice {
-  constructor(_g, messages) {
+  constructor(_g, messages, callbacks) {
     this.g = _g;
     this.messages = messages;
     this.fills = {};
+    this.callbacks = callbacks;
   }
 
   speak(type, lines) {
@@ -151,12 +152,27 @@ class Voice {
 
   cleanup(template){
     // grammar stuff
+    template = this.handleFunctionCalls(template);
     template = this.handlePreposition(template);
     template = this.handlePlurals(template);      
     template = this.handleIndefArticle(template); // handle words that need a/an before it
 
     // get rid of extra spaces
     template = template.replace(/ +/g, " ");
+    template = template.replace(/ +(\W)/g, "$1"); // spaces before symbols (ie punctuations)
+
+    return template;
+  }
+
+  handleFunctionCalls(template){
+    let slotPatternP = /\{\s*([\s\w]+)->(\w+)\s*\}/;
+
+    while (template.match(slotPatternP)) {
+      template = template.replace(slotPatternP, (match, string, func) => {
+        if(this.callbacks[func]) string = this.callbacks[func](string);
+        return string;
+      });
+    }
 
     return template;
   }
@@ -207,7 +223,7 @@ class Voice {
 
     return template;
   }
-
+  
   handleIndefArticle(template) {
     let slotPatternV = /\[\s*(\w+)\s*:(\w+)\s*\]/;
 

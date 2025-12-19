@@ -6,7 +6,7 @@
         "hobby": ["hiking", "$going $activity"],
         "going": ["going {p}"],
         "activity": ["{p: to} the gym", "{p: on} walks", "{p: to} the movies"],
-        "time_qualifier": ["a lot $[all]time_qualifier", "a lot", "lately", "recently", "again"]
+        "time_qualifier": ["{ a lot $[all]time_qualifier ->no_duplicates}", "a lot", "lately", "recently", "again"]
     },
     "magma": {
         "hobby": ["$[magma]~wrestling"],

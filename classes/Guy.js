@@ -1,5 +1,5 @@
 class Guy {
-	constructor(names, range, temperature){
+	constructor(names, range, temperature, callbacks = {}){
 		this.worms = {};
 		this.wormName = names;
 		this.range = (range) ? range : [0 ,10]
@@ -16,7 +16,7 @@ class Guy {
 		
 		this.initWormMap();
 		
-		this.voice = new Voice(this, messages);
+		this.voice = new Voice(this, messages, callbacks);
 		this.radar = new Radar(this.worms, this.wormName, this.range, 200);
 	}
 

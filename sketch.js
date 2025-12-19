@@ -8,6 +8,13 @@ let messages;
 let tone;
 let currentMessage;
 
+const callbacks = {
+  no_duplicates: (string) => {
+    const unique = [...new Set(string.split(" "))].join(" ");
+    return unique;
+  }
+}
+
 const TEST_CAT = "greeting"
 const TEST_LINES = 1
 const TEST_TEMP = 2;
@@ -91,7 +98,7 @@ function makeGuy() {
   let _r = CONFIG["RANGE"];
   let range = [_r[0], _r[1]]; 
 
-  globalGuy = new Guy(WORMS, range, TEST_TEMP); // make guy
+  globalGuy = new Guy(WORMS, range, TEST_TEMP, callbacks); // make guy
   globalGuy.self(true);
   globalGuy.speak(TEST_CAT, TEST_LINES);
 }
