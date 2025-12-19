@@ -13,7 +13,8 @@
     },
     "fear": {
         "salutation": ["who's there", "hello", "what's happening"],
-        "punctuation": ["?"]
+        "punctuation": ["? $[fear]relief!"],
+        "relief": ["oh", "ah", "hey", "$[all]salutation", "$[fear]relief! it's you", "it's you"]
     },
     "concrete": {
         "salutation": [],

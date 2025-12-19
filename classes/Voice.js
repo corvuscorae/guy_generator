@@ -65,7 +65,7 @@ class Voice {
     template = this.handleFills(template, json, `\\$(\\w+)`);
     // template = this.handleFills(template, json, `\\>(\\w+)`, { getParam: ">" });
 
-    template = this.handleFills(template, json, `\\$\\[(\\w+\\]\\w+)`, { splitter: "]", getParam: true});
+    template = this.handleFills(template, json, `\\$\\[(\\w+\\]\\~?\\w+)`, { splitter: "]", getParam: true});
 
     template = this.handleReroute(template, json);
 
@@ -111,7 +111,7 @@ class Voice {
     let pickedParam = typeof param === "object" ? random(param) : param;
     let fill = filler;
 
-    if(filler[0] !== "_"){
+    if(filler[0] !== "~"){
       if(!json[pickedParam]) pickedParam = "all";
       let options = json[pickedParam][filler];
       if (options == null || options.length === 0) {

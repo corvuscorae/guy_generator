@@ -1,32 +1,106 @@
 {
     "base": [
-        "been $hobby"
+        "been $hobby $time_qualifier."
     ],
     "all": {
-        "hobby": ["default"]
+        "hobby": ["hiking", "$going $activity"],
+        "going": ["going {p}"],
+        "activity": ["{p: to} the gym", "{p: on} walks", "{p: to} the movies"],
+        "time_qualifier": ["a lot $[all]time_qualifier", "a lot", "lately", "recently", "again"]
     },
     "magma": {
-        "hobby": [">_wrestling"],
+        "hobby": ["$[magma]~wrestling"],
+        "going": ["hitting"],
         "wrestling": {
             "base": ["$doing $where"],
             "all": {
-                "doing": ["hitting", "fighting {p}", "getting {p}"],
+                "doing": ["hitting", "fighting {p}", "getting {p}", "dominating {p}"],
                 "where": ["{p: on} the mat", "{p: in} the ring"]
             }
         }
     },
     "fear": {
+        "hobby": ["$[fear]~trembling"],
+        "going": ["trying"],
+        "trembling": {
+            "base": ["$hiding from the $portal", "$hiding {p} $place"],
+            "all": {
+                "hiding": ["hiding", "lying low", "holing up", "staying away {p}"],
+                "portal": ["door", "window", "outside", "{ window :s}"],
+                "place": ["{p: under} the bed", "{p: in} the closet", "{p: in} the house", "{p: at} home"]
+            }
+        }
+
     },
     "concrete": {
+        "hobby": ["$[concrete]~planes", "$going $activity"],
+        "going": ["visiting", "doing", "going {p}"],
+        "planes": {
+            "base": ["$tracking { $plane :s}"],
+            "all": {
+                "tracking": ["tracking", "monitoring", "radaring", "spotting"],
+                "plane": ["airbus", "aircraft", "cessna", "boeing", "737", "A320"]
+            }
+        }
     },
     "joy": {
+        "hobby": ["$[joy]~music"],
+        "going": ["enjoying", "loving"],
+        "music": {
+            "base": ["$experiencing $music"],
+            "all": {
+                "experiencing": ["breathing", "listening to", "cherishing"],
+                "music": ["melodies", "piano", "music", "the symphony", "the symphony of $woowoo"],
+                "woowoo": ["life", "nature", "being"]
+            }
+        }
     },
     "whimsy": {
+        "hobby": ["$[whimsy]~adventure", "$going $[all]activity"],
+        "going": ["journeying {p}", "whisking myself {p}"],
+        "adventure": {
+            "base": ["$traversing $prep $destination"],
+            "all": {
+                "traversing": ["skipping", "wandering", "roaming", "dancing"],
+                "destination": ["the road", "the city", "the meadow", "the forest"],
+                "prep": ["along", "in", "by", "alongside", "within"]
+            }
+        }
     },
     "demons": {
+        "hobby": ["$[demons]~ghouls", "$going $[all]activity"],
+        "going": ["doing", "$[all]going"],
+        "ghouls": {
+            "base": ["$remembering {p: on} my { $past :s}"],
+            "all": {
+                "remembering": ["dwelling {p}", "reliving", "suffering", "conjuring up"],
+                "past": ["memory", "agony", "ghost", "misfortune"]
+            }
+        }
     },
     "raincloud": {
+        "hobby": ["$[raincloud]~depresso", "$going $[all]activity"],
+        "going": ["trying", "attempting", "$considering $going", "$[all]going"],
+        "time_qualifier": ["$[all]time_qualifier", "sometimes"],
+        "considering": ["considering", "thinking about"],
+        "depresso": {
+            "base": ["$statis {p} $chamber"],
+            "all": {
+                "statis": ["staying", "laying", "sleeping"],
+                "chamber": ["{p: at} home", "{p: in} bed", "{p: in} my room"]
+            }
+        }
     },
     "stargazing": {
+        "hobby": ["$[stargazing]~pondering", "$going $[all]activity"],
+        "going": ["musing about", "considering", "pondering"],
+        "pondering": {
+            "base": ["$thinking $prep $subject"],
+            "all": {
+                "thinking": ["thinking", "pondering", "contemplating", "meditating"],
+                "subject": ["the stars", "the universe", "meaning", "humanity"],
+                "prep": ["about", "on", "over", "apropros"]
+            }
+        }
     }
 }
